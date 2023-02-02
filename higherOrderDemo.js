@@ -112,3 +112,15 @@ let reduceArr = filteredArr.reduce((acc, curr) => {
     console.log(`The current value in the loop is ${curr}`)
     return acc + curr
 },0)
+
+let example = [1,2,3,4,5];
+
+let copyExample = example.map((element,index) => {
+    if(element % 2 === 0) {
+        return element + index;
+    } else {
+        return element - index;
+    }
+}).filter((element) => element !== 1).reduce((acc,curr) => acc + curr,0);
+
+console.log(copyExample);
